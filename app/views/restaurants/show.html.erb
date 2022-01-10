@@ -12,8 +12,13 @@
 
 <p>
   <strong>Stars:</strong>
-  <%= @restaurant.stars %>
+  <%= "⭐" * @restaurant.stars %>
 </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<p>
+<strong> Chef: </strong>
+<%= @restaurant.chef_name %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
+|<%= link_to 'Back', restaurants_path %>
