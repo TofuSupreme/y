@@ -10,6 +10,7 @@ puts "creating restaurants.."
   restaurant = Restaurant.create(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
+    chef_name: Faker::Games::Fallout.character,
     stars: rand(1..5)
   )
   puts "restaurant #{restaurant.id} is created"
